@@ -20,6 +20,18 @@ export class UserComponent {
 
     //Methods
     constructor(){
-        console.log('Howdy, User!');
+        this.sayHello()
+
+        console.log(this.age)
+        this.hasBirthday()
+        console.log(this.age)
+    }
+
+    sayHello(){
+        console.log(`Howdy, ${this.firstName}!`);
+    }
+
+    hasBirthday(){
+        this.age += 1;
     }
 }
