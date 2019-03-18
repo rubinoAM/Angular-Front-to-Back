@@ -17,14 +17,18 @@ export class UserComponent {
     firstName:string = 'Michael';
     lastName:string = 'Rubino';
     age:number = 27;
+    address = {
+        street: '62 E 2nd St.',
+        city: 'Freeport',
+        state: 'NY',
+    }
 
     //Methods
     constructor(){
         this.sayHello()
-
-        console.log(this.age)
+        /* console.log(this.age)
         this.hasBirthday()
-        console.log(this.age)
+        console.log(this.age) */
     }
 
     sayHello(){

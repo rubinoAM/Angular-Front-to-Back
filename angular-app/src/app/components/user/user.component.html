@@ -1,1 +1,8 @@
-<h2>Michael Rubino</h2>
+<!-- <h2>Michael Rubino</h2> 
+{{  }} String Interpolation: Used to display properties-->
+
+<h2>{{firstName}} {{lastName}}</h2>
+<ul>
+    <li>Age: {{age}}</li> <!--Numbers still get rendered as strings-->
+    <li>Address: {{address.street}} {{address.city}}, {{address.state}}</li>
+</ul>
