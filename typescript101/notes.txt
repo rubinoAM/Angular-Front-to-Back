@@ -1,0 +1,28 @@
+What is TypeScript?
+
+A superset of JavaScript created by Microsoft
+Written in Typescript, compiles code to plain JavaScript
+Features:
+    - Static Typing
+    - Object Classes (syntatic sugar in essence)
+    - Modules
+    - let/const scoping
+    - Plus other ES6+ features (e.g. arrow functions, etc.)
+
+Can be installed with NPM
+
+Static Type Checking:
+    - Assign variable, parameter and function types
+    - Optional
+    - Helps find bugs
+    - More descriptive code
+
+Available types:
+    - String
+    - Number
+    - Boolean
+    - Array
+    - Any
+    - Void
+    - Null
+    - Tuple
