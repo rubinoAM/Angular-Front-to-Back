@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../../models/User';
 
 @Component({
     selector: 'app-user',
@@ -14,7 +15,7 @@ import { Component } from '@angular/core';
 
 export class UserComponent {
     //Properties
-    firstName:string;
+    /* firstName:string;
     lastName:string;
     age:number;
     address;
@@ -23,11 +24,13 @@ export class UserComponent {
     numberArray:number[];
     stringArray:string[];
     mixedArray:any[];
-    myTuple:[string,number,boolean];
+    myTuple:[string,number,boolean]; */
+
+    user:User;
 
     //Methods
     constructor(){
-        this.firstName = 'Michael';
+        /* this.firstName = 'Michael';
         this.lastName = 'Rubino';
         this.age = 27;
         this.address = {
@@ -43,21 +46,33 @@ export class UserComponent {
         this.myTuple = ['tuna',15,true]; //You can put more stuff in after the last condition has been met. Everything before that has to match, though.
 
         this.sayHello();
-        /* console.log(this.age)
+        console.log(this.age)
         this.hasBirthday()
-        console.log(this.age) */
-        console.log(this.addNumbers(1,1));
+        console.log(this.age)
+        console.log(this.addNumbers(1,1)); */
+
+        this.user = {
+            firstName:'Michael',
+            lastName:'Rubino',
+            age:27,
+            address:{
+                street:'62 E Second St.',
+                city:'Freeport',
+                state:'NY',
+                zip:11520,
+            },
+        }
     }
 
-    sayHello(){
+    /* sayHello(){
         console.log(`Howdy, ${this.firstName}!`);
-    }
+    } */
 
-    hasBirthday(){
+    /* hasBirthday(){
         this.age += 1;
-    }
+    } */
 
-    addNumbers(num1:number, num2:number): number{
+    /* addNumbers(num1:number, num2:number): number{
         return num1 + num2
-    }
+    } */
 }
