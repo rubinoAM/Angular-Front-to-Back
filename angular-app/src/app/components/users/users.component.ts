@@ -11,7 +11,8 @@ export class UsersComponent implements OnInit {
   showExtended:boolean = true;
   loaded:boolean = false;
   enableAdd:boolean = true;
-  currentClasses:{}
+  currentClasses:{};
+  currentStyles:{};
 
   constructor(){
 
@@ -85,7 +86,8 @@ export class UsersComponent implements OnInit {
         //     zip:11520,
         // },
       //});
-      this.setCurrentClasses()
+      this.setCurrentClasses();
+      this.setCurrentStyles();
 
       this.loaded = true;
     },2000);
@@ -99,6 +101,13 @@ export class UsersComponent implements OnInit {
     this.currentClasses = {
       'btn-success':this.enableAdd,
       'big-text':this.showExtended,
+    }
+  }
+
+  setCurrentStyles(){
+    this.currentStyles = {
+      'padding-top': this.showExtended ? '0' : '40px',
+      'font-size': this.showExtended ? '' : '40px',
     }
   }
 }
