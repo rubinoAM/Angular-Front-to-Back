@@ -30,6 +30,7 @@ export class UsersComponent implements OnInit {
               zip:11520,
           },
           image:'http://lorempixel.com/600/600/people/3',
+          isActive:true,
         },
         {
           firstName:'Lisa',
@@ -42,6 +43,7 @@ export class UsersComponent implements OnInit {
               zip:11520,
           },
           image:'http://lorempixel.com/600/600/people/2',
+          isActive:false,
         },
         {
           firstName:'Christopher',
@@ -54,6 +56,7 @@ export class UsersComponent implements OnInit {
               zip:11520,
           },
           image:'http://lorempixel.com/600/600/people/1',
+          isActive:false,
         },
         {
           firstName:'Kimberly',
@@ -66,6 +69,7 @@ export class UsersComponent implements OnInit {
               zip:11520,
           },
           image:'http://lorempixel.com/600/600/people/4',
+          isActive:true,
         },
       ];
   

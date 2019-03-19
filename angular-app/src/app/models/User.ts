@@ -9,4 +9,5 @@ export interface User {
         zip?:number,
     },
     image?:string,
+    isActive?:boolean,
 }
