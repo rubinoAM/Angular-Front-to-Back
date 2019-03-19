@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
   users:User[];
   showExtended:boolean = true;
   loaded:boolean = false;
+  enableAdd:boolean = true;
 
   constructor(){
 
@@ -28,6 +29,7 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
+          image:'http://lorempixel.com/600/600/people/3',
         },
         {
           firstName:'Lisa',
@@ -39,6 +41,7 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
+          image:'http://lorempixel.com/600/600/people/2',
         },
         {
           firstName:'Christopher',
@@ -50,6 +53,7 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
+          image:'http://lorempixel.com/600/600/people/1',
         },
         {
           firstName:'Kimberly',
@@ -61,12 +65,13 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
+          image:'http://lorempixel.com/600/600/people/4',
         },
       ];
   
-      this.addUser({
-        firstName:'Gizmo',
-        lastName:'Rubino',
+      // this.addUser({
+      //   firstName:'Gizmo',
+      //   lastName:'Rubino',
         // age:10,
         // address:{
         //     street:'62 E Second St.',
@@ -74,7 +79,7 @@ export class UsersComponent implements OnInit {
         //     state:'NY',
         //     zip:11520,
         // },
-      });
+      //});
 
       this.loaded = true;
     },2000);
