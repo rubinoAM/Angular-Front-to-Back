@@ -8,7 +8,7 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   users:User[];
-  showExtended:boolean = true;
+  showExtended:boolean = false;
   loaded:boolean = false;
   enableAdd:boolean = true;
   //currentClasses:{};
@@ -106,5 +106,9 @@ export class UsersComponent implements OnInit {
   //     'padding-top': this.showExtended ? '0' : '40px',
   //     'font-size': this.showExtended ? '' : '40px',
   //   }
+  // }
+
+  // fireEvent(e){
+  //   console.log(e);
   // }
 }
