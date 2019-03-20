@@ -33,6 +33,8 @@ export class UsersComponent implements OnInit {
           },
           image:'http://lorempixel.com/600/600/people/3',
           isActive:true,
+          balance:100.00,
+          registered: new Date('03/18/2018 08:30:00'),
         },
         {
           firstName:'Lisa',
@@ -46,6 +48,8 @@ export class UsersComponent implements OnInit {
           },
           image:'http://lorempixel.com/600/600/people/2',
           isActive:false,
+          balance:50.00,
+          registered: new Date('03/19/2018 08:30:00'),
         },
         {
           firstName:'Christopher',
@@ -59,6 +63,8 @@ export class UsersComponent implements OnInit {
           },
           image:'http://lorempixel.com/600/600/people/1',
           isActive:false,
+          balance:50.00,
+          registered: new Date('03/19/2018 08:30:00'),
         },
         {
           firstName:'Kimberly',
@@ -72,20 +78,11 @@ export class UsersComponent implements OnInit {
           },
           image:'http://lorempixel.com/600/600/people/4',
           isActive:true,
+          balance:50.00,
+          registered: new Date('03/19/2018 08:30:00'),
         },
       ];
-  
-      // this.addUser({
-      //   firstName:'Gizmo',
-      //   lastName:'Rubino',
-        // age:10,
-        // address:{
-        //     street:'62 E Second St.',
-        //     city:'Freeport',
-        //     state:'NY',
-        //     zip:11520,
-        // },
-      //});
+      
       this.setCurrentClasses();
       this.setCurrentStyles();
 
