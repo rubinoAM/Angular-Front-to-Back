@@ -8,8 +8,8 @@ export interface User {
         state?:string,
         zip?:number,
     },
-    image?:string,
+    // image?:string,
     isActive?:boolean,
-    balance?:number,
+    // balance?:number,
     registered?:any,
 }

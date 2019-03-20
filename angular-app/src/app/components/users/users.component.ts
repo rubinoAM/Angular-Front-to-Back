@@ -11,8 +11,8 @@ export class UsersComponent implements OnInit {
   showExtended:boolean = true;
   loaded:boolean = false;
   enableAdd:boolean = true;
-  currentClasses:{};
-  currentStyles:{};
+  //currentClasses:{};
+  //currentStyles:{};
 
   constructor(){
 
@@ -31,9 +31,9 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
-          image:'http://lorempixel.com/600/600/people/3',
+          // image:'http://lorempixel.com/600/600/people/3',
           isActive:true,
-          balance:100.00,
+          // balance:100.00,
           registered: new Date('03/18/2018 08:30:00'),
         },
         {
@@ -46,9 +46,9 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
-          image:'http://lorempixel.com/600/600/people/2',
+          // image:'http://lorempixel.com/600/600/people/2',
           isActive:false,
-          balance:50.00,
+          // balance:50.00,
           registered: new Date('03/19/2018 08:30:00'),
         },
         {
@@ -61,9 +61,9 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
-          image:'http://lorempixel.com/600/600/people/1',
+          // image:'http://lorempixel.com/600/600/people/1',
           isActive:false,
-          balance:50.00,
+          // balance:50.00,
           registered: new Date('03/19/2018 08:30:00'),
         },
         {
@@ -76,15 +76,15 @@ export class UsersComponent implements OnInit {
               state:'NY',
               zip:11520,
           },
-          image:'http://lorempixel.com/600/600/people/4',
+          // image:'http://lorempixel.com/600/600/people/4',
           isActive:true,
-          balance:50.00,
+          // balance:50.00,
           registered: new Date('03/19/2018 08:30:00'),
         },
       ];
       
-      this.setCurrentClasses();
-      this.setCurrentStyles();
+      // this.setCurrentClasses();
+      // this.setCurrentStyles();
 
       this.loaded = true;
     },2000);
@@ -94,17 +94,17 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
-  setCurrentClasses(){
-    this.currentClasses = {
-      'btn-success':this.enableAdd,
-      'big-text':this.showExtended,
-    }
-  }
+  // setCurrentClasses(){
+  //   this.currentClasses = {
+  //     'btn-success':this.enableAdd,
+  //     'big-text':this.showExtended,
+  //   }
+  // }
 
-  setCurrentStyles(){
-    this.currentStyles = {
-      'padding-top': this.showExtended ? '0' : '40px',
-      'font-size': this.showExtended ? '' : '40px',
-    }
-  }
+  // setCurrentStyles(){
+  //   this.currentStyles = {
+  //     'padding-top': this.showExtended ? '0' : '40px',
+  //     'font-size': this.showExtended ? '' : '40px',
+  //   }
+  // }
 }

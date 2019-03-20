@@ -1,26 +1,26 @@
 <h2>Users</h2>
-<button [disabled]="!enableAdd" class="btn btn-block mb-3" [ngClass]="currentClasses">Add New User</button>
+<button [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button> <!-- [ngClass]="currentClasses"-->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0"> <!-- add ; else noUsers inside that if clause to use ng-template-->
-  <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-light]="user.isActive" [style.border-color]="user.isActive ? 'green' : ''">
-    <div class="row">
-      <div class="col-sm-4">
+  <li class="card card-body mb-2" *ngFor="let user of users"> <!--[class.bg-light]="user.isActive" [style.border-color]="user.isActive ? 'green' : ''"-->
+    <!-- <div class="row"> -->
+      <!-- <div class="col-sm-4">
         <img *ngIf="user.image" class="img-fluid" [src]="user.image" alt=""/>
-        <!-- <img *ngIf="user.image" class="img-fluid" bind-src="user.image" alt=""/> -->
-      </div>
-      <div class="col-sm-8">
-        <h4 [ngStyle]="currentStyles">
+        <img *ngIf="user.image" class="img-fluid" bind-src="user.image" alt=""/>
+      </div> -->
+      <!-- <div class="col-sm-8"> -->
+        <h4> <!-- [ngStyle]="currentStyles"-->
           {{user.firstName | uppercase}} {{user.lastName | uppercase}}
         </h4>
         <button [disabled]="!showExtended" class="btn btn-light btn-block">Info</button>
         <ul class="list-group" *ngIf="showExtended && user.age && user.address">
           <li class="list-group-item">Age: {{user.age}}</li> <!--Numbers still get rendered as strings-->
           <li class="list-group-item">Address: {{user.address.street}} {{user.address.city}}, {{user.address.state}} {{user.address.zip}}</li>
-          <li class="list-group-item">Balance: {{user.balance | currency:"GBP":"code"}}<!--until {{ .14 | percent }}--></li>
+          <!-- <li class="list-group-item">Balance: {{user.balance | currency:"GBP":"code"}} until {{ .14 | percent }}</li> -->
           <li class="list-group-item">Registration Date: {{user.registered | date:"shortDate"}}</li>
-          <li class="list-group-item">{{5 | number:"1.2"}}</li><!--ngNonBindable renders the actual code--> 
+          <!-- <li class="list-group-item">{{5 | number:"1.2"}}</li> ngNonBindable renders the actual code  -->
         </ul>
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
   </li>
 </ul>
 
