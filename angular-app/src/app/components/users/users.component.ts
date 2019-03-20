@@ -106,8 +106,21 @@ export class UsersComponent implements OnInit {
     },2000);
   }
 
-  addUser(user:User){
-    this.users.push(user);
+  addUser(){
+    this.user.isActive = true;
+    this.user.registered = new Date();
+    this.users.push(this.user);
+    this.user = {
+      firstName:'',
+      lastName:'',
+      age:null,
+      address:{
+        street:'',
+        city:'',
+        state:'',
+        zip:null,
+      }
+    }
   }
 
   // setCurrentClasses(){
