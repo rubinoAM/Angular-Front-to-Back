@@ -11,6 +11,10 @@
       <input [(ngModel)]="user.lastName" type="text" class="form-control mb-3" name="lastName">
     </div>
     <div class="form-group">
+      <label>Email</label>
+      <input [(ngModel)]="user.email" type="text" class="form-control mb-3" name="email">
+    </div>
+    <!-- <div class="form-group">
       <label>Age</label>
       <input [(ngModel)]="user.age" type="number" class="form-control mb-3" name="age">
     </div>
@@ -29,11 +33,10 @@
     <div class="form-group">
       <label>Zip</label>
       <input [(ngModel)]="user.address.zip" type="number" class="form-control mb-3" name="zip">
-    </div>
+    </div> -->
     <button (click)="addUser()" [disabled]="user.firstName == '' || user.lastName == ''" class="btn btn-block btn-primary mb-3">Add New User</button> <!-- [ngClass]="currentClasses"-->
   </form>
 </div>
-
 <h2>Users</h2>
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0"> <!-- add ; else noUsers inside that if clause to use ng-template-->
   <li class="card card-body mb-2" *ngFor="let user of users"> <!--[class.bg-light]="user.isActive" [style.border-color]="user.isActive ? 'green' : ''"-->
@@ -45,16 +48,17 @@
       <!-- <div class="col-sm-8"> -->
         <h4> <!-- [ngStyle]="currentStyles"-->
           {{user.firstName}} {{user.lastName}}
-          <small *ngIf="user.age && user.address">
+          <small *ngIf="user.email">
               <button (click)="user.hide = !user.hide" class="btn btn-dark btn-sm"><i class="fa" [ngClass]="user.hide ? 'fa-plus' : 'fa-minus'"></i></button>
           </small>
         </h4>
-        <ul class="list-group" *ngIf="!user.hide && user.age && user.address">
-          <li class="list-group-item">Age: {{user.age}}</li> <!--Numbers still get rendered as strings-->
+        <ul class="list-group" *ngIf="!user.hide && user.email">
+          <li class="list-group-item">Email: {{user.email}}</li>
+          <!-- <li class="list-group-item">Age: {{user.age}}</li> Numbers still get rendered as strings
           <li class="list-group-item">Address: {{user.address.street}} {{user.address.city}}, {{user.address.state}} {{user.address.zip}}</li>
-          <!-- <li class="list-group-item">Balance: {{user.balance | currency:"GBP":"code"}} until {{ .14 | percent }}</li> -->
+          <li class="list-group-item">Balance: {{user.balance | currency:"GBP":"code"}} until {{ .14 | percent }}</li>
           <li class="list-group-item">Registration Date: {{user.registered | date:"shortDate"}}</li>
-          <!-- <li class="list-group-item">{{5 | number:"1.2"}}</li> ngNonBindable renders the actual code  -->
+          <li class="list-group-item">{{5 | number:"1.2"}}</li> ngNonBindable renders the actual code  -->
         </ul>
       <!-- </div>
     </div> -->

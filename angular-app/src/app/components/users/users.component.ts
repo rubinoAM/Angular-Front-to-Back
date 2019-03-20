@@ -11,19 +11,18 @@ export class UsersComponent implements OnInit {
   user:User = {
     firstName:'',
     lastName:'',
-    age:null,
+    email:'',
+    /* age:null,
     address:{
       street:'',
       city:'',
       state:'',
       zip:null,
-    }
+    } */
   };
   showExtended:boolean = true;
   loaded:boolean = false;
   enableAdd:boolean = false;
-  //currentClasses:{};
-  //currentStyles:{};
   showUserForm:boolean = false;
 
   constructor(){
@@ -36,13 +35,14 @@ export class UsersComponent implements OnInit {
         {
           firstName:'Michael',
           lastName:'Rubino',
-          age:27,
+          email:'mrubino@rubinofamily.com',
+          /* age:27,
           address:{
               street:'62 E Second St.',
               city:'Freeport',
               state:'NY',
               zip:11520,
-          },
+          }, */
           // image:'http://lorempixel.com/600/600/people/3',
           isActive:true,
           // balance:100.00,
@@ -52,13 +52,14 @@ export class UsersComponent implements OnInit {
         {
           firstName:'Lisa',
           lastName:'Rubino',
-          age:31,
+          email:'lrubino@rubinofamily.com',
+          /* age:31,
           address:{
               street:'62 E Second St.',
               city:'Freeport',
               state:'NY',
               zip:11520,
-          },
+          }, */
           // image:'http://lorempixel.com/600/600/people/2',
           isActive:false,
           // balance:50.00,
@@ -68,13 +69,14 @@ export class UsersComponent implements OnInit {
         {
           firstName:'Christopher',
           lastName:'Rubino',
-          age:49,
+          email:'crubino@rubinofamily.com',
+          /* age:49,
           address:{
               street:'62 E Second St.',
               city:'Freeport',
               state:'NY',
               zip:11520,
-          },
+          }, */
           // image:'http://lorempixel.com/600/600/people/1',
           isActive:false,
           // balance:50.00,
@@ -84,13 +86,14 @@ export class UsersComponent implements OnInit {
         {
           firstName:'Kimberly',
           lastName:'Rubino',
-          age:45,
+          email:'krubino@rubinofamily.com',
+          /* age:45,
           address:{
               street:'62 E Second St.',
               city:'Freeport',
               state:'NY',
               zip:11520,
-          },
+          }, */
           // image:'http://lorempixel.com/600/600/people/4',
           isActive:true,
           // balance:50.00,
@@ -98,9 +101,6 @@ export class UsersComponent implements OnInit {
           hide: true,
         },
       ];
-      
-      // this.setCurrentClasses();
-      // this.setCurrentStyles();
 
       this.loaded = true;
     },2000);
@@ -113,33 +113,16 @@ export class UsersComponent implements OnInit {
     this.user = {
       firstName:'',
       lastName:'',
-      age:null,
+      email:'',
+      /* age:null,
       address:{
         street:'',
         city:'',
         state:'',
         zip:null,
-      }
+      } */
     }
   }
-
-  // setCurrentClasses(){
-  //   this.currentClasses = {
-  //     'btn-success':this.enableAdd,
-  //     'big-text':this.showExtended,
-  //   }
-  // }
-
-  // setCurrentStyles(){
-  //   this.currentStyles = {
-  //     'padding-top': this.showExtended ? '0' : '40px',
-  //     'font-size': this.showExtended ? '' : '40px',
-  //   }
-  // }
-
-  // toggleHide(user:User){
-  //   user.hide = !user.hide
-  // }
 
   onSubmit(e){
     e.preventDefault();
