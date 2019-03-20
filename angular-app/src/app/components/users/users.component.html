@@ -9,8 +9,8 @@
       </div> -->
       <!-- <div class="col-sm-8"> -->
         <h4> <!-- [ngStyle]="currentStyles"-->
-          {{user.firstName | uppercase}} {{user.lastName | uppercase}}
-          <small>
+          {{user.firstName}} {{user.lastName}}
+          <small *ngIf="user.age && user.address">
               <button (click)="user.hide = !user.hide" class="btn btn-dark btn-sm"><i class="fa" [ngClass]="user.hide ? 'fa-plus' : 'fa-minus'"></i></button>
           </small>
         </h4>
