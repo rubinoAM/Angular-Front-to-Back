@@ -54,10 +54,10 @@
         </h4>
         <ul class="list-group" *ngIf="!user.hide && user.email">
           <li class="list-group-item">Email: {{user.email}}</li>
+          <li class="list-group-item">Registration Date: {{user.registered | date:"shortDate"}}</li>
           <!-- <li class="list-group-item">Age: {{user.age}}</li> Numbers still get rendered as strings
           <li class="list-group-item">Address: {{user.address.street}} {{user.address.city}}, {{user.address.state}} {{user.address.zip}}</li>
           <li class="list-group-item">Balance: {{user.balance | currency:"GBP":"code"}} until {{ .14 | percent }}</li>
-          <li class="list-group-item">Registration Date: {{user.registered | date:"shortDate"}}</li>
           <li class="list-group-item">{{5 | number:"1.2"}}</li> ngNonBindable renders the actual code  -->
         </ul>
       <!-- </div>
