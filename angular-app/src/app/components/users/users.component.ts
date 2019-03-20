@@ -8,9 +8,20 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   users:User[];
+  user:User = {
+    firstName:'',
+    lastName:'',
+    age:null,
+    address:{
+      street:'',
+      city:'',
+      state:'',
+      zip:null,
+    }
+  };
   showExtended:boolean = true;
   loaded:boolean = false;
-  enableAdd:boolean = true;
+  enableAdd:boolean = false;
   //currentClasses:{};
   //currentStyles:{};
   showUserForm:boolean = false;
