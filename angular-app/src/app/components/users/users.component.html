@@ -10,9 +10,11 @@
       <!-- <div class="col-sm-8"> -->
         <h4> <!-- [ngStyle]="currentStyles"-->
           {{user.firstName | uppercase}} {{user.lastName | uppercase}}
+          <small>
+              <button (click)="user.hide = !user.hide" class="btn btn-dark btn-sm"><i class="fa" [ngClass]="user.hide ? 'fa-plus' : 'fa-minus'"></i></button>
+          </small>
         </h4>
-        <button [disabled]="!showExtended" class="btn btn-light btn-block">Info</button>
-        <ul class="list-group" *ngIf="showExtended && user.age && user.address">
+        <ul class="list-group" *ngIf="!user.hide && user.age && user.address">
           <li class="list-group-item">Age: {{user.age}}</li> <!--Numbers still get rendered as strings-->
           <li class="list-group-item">Address: {{user.address.street}} {{user.address.city}}, {{user.address.state}} {{user.address.zip}}</li>
           <!-- <li class="list-group-item">Balance: {{user.balance | currency:"GBP":"code"}} until {{ .14 | percent }}</li> -->

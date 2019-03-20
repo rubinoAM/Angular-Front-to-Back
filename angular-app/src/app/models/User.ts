@@ -12,4 +12,5 @@ export interface User {
     isActive?:boolean,
     // balance?:number,
     registered?:any,
+    hide?:boolean,
 }
