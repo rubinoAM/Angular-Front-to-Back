@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../models/User';
 
 @Component({
@@ -12,18 +12,12 @@ export class UsersComponent implements OnInit {
     firstName:'',
     lastName:'',
     email:'',
-    /* age:null,
-    address:{
-      street:'',
-      city:'',
-      state:'',
-      zip:null,
-    } */
   };
   showExtended:boolean = true;
   loaded:boolean = false;
   enableAdd:boolean = false;
   showUserForm:boolean = false;
+  @ViewChild('userForm') form:any;
 
   constructor(){
 
@@ -36,16 +30,7 @@ export class UsersComponent implements OnInit {
           firstName:'Michael',
           lastName:'Rubino',
           email:'mrubino@rubinofamily.com',
-          /* age:27,
-          address:{
-              street:'62 E Second St.',
-              city:'Freeport',
-              state:'NY',
-              zip:11520,
-          }, */
-          // image:'http://lorempixel.com/600/600/people/3',
           isActive:true,
-          // balance:100.00,
           registered: new Date('03/18/2018 08:30:00'),
           hide: true,
         },
@@ -53,16 +38,7 @@ export class UsersComponent implements OnInit {
           firstName:'Lisa',
           lastName:'Rubino',
           email:'lrubino@rubinofamily.com',
-          /* age:31,
-          address:{
-              street:'62 E Second St.',
-              city:'Freeport',
-              state:'NY',
-              zip:11520,
-          }, */
-          // image:'http://lorempixel.com/600/600/people/2',
           isActive:false,
-          // balance:50.00,
           registered: new Date('03/19/2018 08:30:00'),
           hide: true,
         },
@@ -70,16 +46,7 @@ export class UsersComponent implements OnInit {
           firstName:'Christopher',
           lastName:'Rubino',
           email:'crubino@rubinofamily.com',
-          /* age:49,
-          address:{
-              street:'62 E Second St.',
-              city:'Freeport',
-              state:'NY',
-              zip:11520,
-          }, */
-          // image:'http://lorempixel.com/600/600/people/1',
           isActive:false,
-          // balance:50.00,
           registered: new Date('03/19/2018 08:30:00'),
           hide: true,
         },
@@ -87,16 +54,7 @@ export class UsersComponent implements OnInit {
           firstName:'Kimberly',
           lastName:'Rubino',
           email:'krubino@rubinofamily.com',
-          /* age:45,
-          address:{
-              street:'62 E Second St.',
-              city:'Freeport',
-              state:'NY',
-              zip:11520,
-          }, */
-          // image:'http://lorempixel.com/600/600/people/4',
           isActive:true,
-          // balance:50.00,
           registered: new Date('03/19/2018 08:30:00'),
           hide: true,
         },
@@ -106,27 +64,17 @@ export class UsersComponent implements OnInit {
     },2000);
   }
 
-  addUser(){
-    this.user.isActive = true;
-    this.user.registered = new Date();
-    this.users.push(this.user);
-    this.user = {
-      firstName:'',
-      lastName:'',
-      email:'',
-      /* age:null,
-      address:{
-        street:'',
-        city:'',
-        state:'',
-        zip:null,
-      } */
-    }
-  }
+  onSubmit({value, valid}:{value:User,valid:boolean}){
+    if(!valid){
+      alert('BARK');
+    } else {
+      value.isActive = true;
+      value.registered = new Date();
+      value.hide = true;
+      this.users.unshift(value);
 
-  onSubmit(e){
-    e.preventDefault();
-    console.log(e);
+      this.form.reset();
+    }
   }
 
   fireEvent(e){
