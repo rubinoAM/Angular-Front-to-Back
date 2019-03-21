@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { DataService } from './services/data.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { DataService } from './services/data.service';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [DataService], //Services such as API's are placed here
+  providers: [UserService], //Services such as API's are placed here
   bootstrap: [AppComponent]
 })
 
