@@ -39,8 +39,10 @@
         class="form-control mb-3" 
         name="email"
         #userEmail="ngModel"
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
         required>
-      <div class="invalid-feedback">Email address required</div>
+      <div [hidden]="!userEmail.errors?.required" class="invalid-feedback">Email address required</div>
+      <div [hidden]="!userEmail.errors?.pattern" class="invalid-feedback">Email address is not valid</div>
     </div>
     <button (click)="addUser()" [disabled]="!userForm.form.valid" class="btn btn-block btn-primary mb-3">Add New User</button> <!-- [ngClass]="currentClasses"-->
   </form>
