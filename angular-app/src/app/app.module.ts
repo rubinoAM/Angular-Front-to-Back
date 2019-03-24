@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserService } from './services/user.service';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostService } from './services/post.service';
+import { PostFormComponent } from './components/post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostService } from './services/post.service';
     UserComponent,
     UsersComponent,
     NavbarComponent,
-    PostsComponent, //This was added in automically using ng g c
+    PostsComponent,
+    PostFormComponent, //This was added in automically using ng g c
   ],
   imports: [
     BrowserModule,
